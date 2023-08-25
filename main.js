@@ -4,9 +4,9 @@
 const ganador = document.getElementById('ganador');
 const eleccionJugador = document.getElementById('eleccion-jugador');
 const eleccionPC = document.getElementById('eleccion-pc');
-const btnPiedra = document.getElementById('btn-piedra');
-const btnPapel = document.getElementById('btn-papel');
-const btnTijeras = document.getElementById('btn-tijeras');
+let btnPiedra = document.getElementById('btn-piedra');
+let btnPapel = document.getElementById('btn-papel');
+let btnTijeras = document.getElementById('btn-tijeras');
 const contadorjugador = document.getElementById("contadorjugador");
 const contadorpc = document.getElementById("contadorpc")
 // Inicio las variables para comparar las elecciones//
@@ -49,18 +49,33 @@ function iniciar() {
 //elecciones, toma el boton del jugador y la guarda en opcion jugador y luego llama a la funcion eleccionPc//
 
 btnPiedra.addEventListener('click', function () {
-    opcionJugador = "Piedra";
-    eleccionPc();
+    if (contadorJugador < 3 && contadorPC < 3) {
+        opcionJugador = "Piedra";
+        eleccionPc();
+    }
+    else {
+        btnPiedra.disabled = true;
+    }
 });
 
 btnPapel.addEventListener('click', function () {
+    if (contadorJugador < 3 && contadorPC < 3) {
     opcionJugador = "Papel";
-    eleccionPc();
+    eleccionPc(); }
+    else {
+        btnPapel.disabled = true;
+    }
+
 });
 
 btnTijeras.addEventListener('click', function () {
+    if (contadorJugador < 3 && contadorPC < 3) {
     opcionJugador = "Tijeras";
-    eleccionPc();
+    eleccionPc(); } else {
+        btnTijeras.disabled = true;
+    }
+
+
 })
 
 //Elige aleatoriamente la opcion de la pc y llama a la funcion comparar//
@@ -78,8 +93,9 @@ function eleccionPc() {
     } else if (n == 2) {
         opcionPc = "Tijeras"
     };
-
+    agregaImagenes();
     comparar();
+
 
 };
 
@@ -88,27 +104,24 @@ function eleccionPc() {
 function comparar() {
 
     if (opcionJugador == opcionPc) {
-        ganador.innerHTML = "Empate";
-        contadorEmpate++;
+
 
     } else if (opcionJugador == "Piedra" && opcionPc == "Tijeras") {
-        ganador.innerHTML = "Ganaste";
+
         contadorJugador++;
 
     } else if (opcionJugador == "Papel" && opcionPc == "Piedra") {
-        ganador.innerHTML = "Ganaste";
+
         contadorJugador++;
 
     } else if (opcionJugador == "Tijeras" && opcionPc == "Papel") {
-        ganador.innerHTML = "Ganaste";
+
         contadorJugador++;
 
     } else {
-        ganador.innerHTML = "Perdiste";
+
         contadorPC++;
     };
-
-    agregaImagenes();
 
     ganadorpartida();
 }
@@ -119,25 +132,16 @@ function ganadorpartida() {
     contadorpc.innerHTML = contadorPC;
 
     if (contadorJugador === 3) {
-       
+
         alert("Ganaste la partida");
-            
 
     } else if (contadorPC === 3) {
-    
-        alert("Perdiste la partida");
-       
 
-    } else if ((contadorEmpate + contadorJugador + contadorPC) === 5 && contadorJugador === contadorPC) {
-        
-        alert("Empataste la partida");
-        
+        alert("Perdiste la partida");
+
     }
 
-   
-
 }
-
 
 //Recorre el arreglo de las imagenes y coloca las elecciones//
 
@@ -169,9 +173,9 @@ function reset() {
     contadorjugador.innerHTML = "";
     contadorpc.innerHTML = "";
     ganador.innerHTML = "";
-    eleccionJugador.innerHTML="";
+    eleccionJugador.innerHTML = "";
     versus.innerHTML = "";
-    eleccionPC.innerHTML ="";
+    eleccionPC.innerHTML = "";
 }
 
 
