@@ -10,16 +10,16 @@
 
 <body>
 
-    <h1> Piedra, papel o tijeras </h1>
-
     <div class="juego">
+
+        <h1> Piedra, papel o tijeras </h1>
 
         <div class="usuario">
             <h5>Nombre jugador</h5>
-            <p id="jugador"></p>
+            <p id="jugador"></p>           
         </div>
-
-        <h2>Elija su jugada</h2>
+        
+        <h2>Elija su jugada</h2>        
 
         <div class="jugada">
             <img id="btn-piedra" class="btn-elegido" src="assets/img/piedra.png" alt="Piedra">
@@ -36,9 +36,15 @@
         </div>
 
         <div class="ganador">
-            <p id="ganador"></p>
-            <p id="contadorjugador"></p>
-            <p id="contadorpc"></p>
+            <table><th id="resultado">Resultado</th>            
+            <tr>
+                <td>Jugador</td>
+                <td id="contadorjugador">0</td>
+            <tr>
+                <td>PC</td>
+                <td id="contadorpc">0</td></tr>
+            
+        </table>
         </div>
         <!--botón para limpiar los campos-->
 
