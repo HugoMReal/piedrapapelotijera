@@ -1,5 +1,27 @@
-.usuario,h2,.jugada,.elecciones,.ganador {
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.juego > div, h1, h2{
     border: solid;
     background-color: aliceblue;
+    text-align: center;
+    font-size: 30 px;
+    padding: 20px;
+    ;    
+}
+
+.jugada {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+}
+
+.btnelegido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
