@@ -99,7 +99,7 @@ function agregaImagenes() {
     };
 };
 
-//Luego de terminar la partida se tienen que borrar los campos//
+//Luego de terminar la partida se tienen que borrar los campos y volver el resultado a 0//
 
 function reset() {
     contadorJugador = 0;
@@ -107,7 +107,6 @@ function reset() {
     contadorEmpate = 0;
     contadorjugador.innerHTML = 0;
     contadorpc.innerHTML = 0;
-    ganador.innerHTML = "";
     eleccionJugador.innerHTML = "";
     versus.innerHTML = "";
     eleccionPC.innerHTML = "";
