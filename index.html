@@ -9,53 +9,65 @@
 </head>
 
 <body>
+    <header>
+        <h1> PIEDRA, PAPEL O TIJERAS </h1>
+    </header>
 
-    <div class="juego">
+    <main>
 
-        <h1> Piedra, papel o tijeras </h1>
+        <div class="juego">
 
-        <div class="usuario">
-            <h5>Nombre jugador</h5>
-            <p id="jugador"></p>           
-        </div>
-        
-        <h2>Elija su jugada</h2>        
-
-        <div class="jugada">
-            <img id="btn-piedra" class="btn-elegido" src="assets/img/piedra.png" alt="Piedra">
-            <img id="btn-papel" class="btn-elegido" src="assets/img/papel.png" alt="Papel">
-            <img id="btn-tijeras" class="btn-elegido" src="assets/img/tijera.png" alt="Tijera">
-        </div>
-
-        <div id="elecciones" class="elecciones">
-            <div id="eleccion-jugador"></div>
-            <div>
-                <p id="versus" class="mensajes"></p>
+            <div class="usuario">
+                <h5>NOMBRE JUGADOR</h5>
+                <p id="jugador"></p>
             </div>
-            <div id="eleccion-pc"></div>
+
+            <h2>Elija su jugada, el primero que consiga 3 victorias es el ganador</h2>
+
+            <div class="jugada">
+                <img id="btn-piedra" class="btn-elegido" src="assets/img/piedra.png" alt="Piedra">
+                <img id="btn-papel" class="btn-elegido" src="assets/img/papel.png" alt="Papel">
+                <img id="btn-tijeras" class="btn-elegido" src="assets/img/tijera.png" alt="Tijera">
+            </div>
+
+             <!--muestra la eleccion de cada uno-->
+
+            <div id="elecciones" class="elecciones">
+                <div id="eleccion-jugador"></div>
+                <div>
+                    <p id="versus" class="mensajes"></p>
+                </div>
+                <div id="eleccion-pc"></div>
+            </div>
+
+            <!--Tabla para resultados parciales-->
+
+
+            <div class="ganador">
+                <table style="margin: 0 auto;">
+                    <th id="resultado">RESULTADO</th>
+                    <tr>
+                        <td>Jugador</td>
+                        <td id="contadorjugador">0</td>
+                    <tr>
+                        <td>PC</td>
+                        <td id="contadorpc">0</td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <!--botón para limpiar los campos-->
+
+            <div class="boton">
+
+                <button type="text" onclick="reset()">Restart</button>
+
+            </div>
+
         </div>
-
-        <div class="ganador">
-            <table><th id="resultado">Resultado</th>            
-            <tr>
-                <td>Jugador</td>
-                <td id="contadorjugador">0</td>
-            <tr>
-                <td>PC</td>
-                <td id="contadorpc">0</td></tr>
-            
-        </table>
         </div>
-        <!--botón para limpiar los campos-->
-
-        <div class="boton">
-
-            <button type="text" onclick="reset()">Restart</button>
-
-        </div>
-
-    </div>
-    </div>
+    </main>
     <script src="./main.js"></script>
 </body>
 
