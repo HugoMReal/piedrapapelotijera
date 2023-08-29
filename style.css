@@ -31,7 +31,7 @@ h2 {
     align-items: center;
     padding: 30px;
     border-radius: 20px;
-    max-width: 300px;
+    max-width: 33%;
 }
 
 #btn-piedra,
@@ -40,7 +40,7 @@ h2 {
     border-radius: 20px;
     transition: background-color 300ms;
     border: solid;
-    max-width: 100px;
+    max-width: 33%;
 }
 
 #btn-piedra:hover,
