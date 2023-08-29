@@ -1,27 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Puppies+Play&display=swap');
+
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: Playball;
 }
 
-.juego > div, h1, h2{
-    border: solid;
-    background-color: aliceblue;
-    text-align: center;
-    font-size: 30 px;
-    padding: 20px;
-    ;    
-}
-
-.jugada {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:20px;
-}
-
-.btnelegido{
+body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 }
 
+
+.juego>div,
+h1,
+h2 {
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.elecciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+
+}
+
+#btn-piedra,
+#btn-papel,
+#btn-tijeras {
+    border-radius: 20px;
+    transition: background-color 300ms;
+    border: solid;
+}
+
+#btn-piedra:hover,
+#btn-papel:hover,
+#btn-tijeras:hover {
+    cursor: pointer;
+    background-color: blue;
+
+}
+
+button {
+    font-size: 30px;
+    border-radius: 20%;
+    padding: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: blue;
+    border: solid black;
+}
+
+
+.elecciones {
+    animation-name: heartbeat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1); }
+    25% {
+        transform: scale(1.3);  }
+    50% {
+        transform: scale(1); }
+    75% {
+        transform: scale(0.7); }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-elegido {
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.btn-elegido:hover {
+    transform: scale3d(1.1, 1.1, 0.3);
+    -webkit-transform: scale3d(1.1, 1.1, 0.3);
+    -moz-transform: scale3d(1.1, 1.1, 0.3);
+}
