@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-   ;
+    min-height: 100vh;
 }
 
 
@@ -29,8 +29,6 @@ h2 {
     align-items: center;
     padding: 30px;
     border-radius: 20px;
-    max-width: 1000px;
-
 }
 
 #btn-piedra,
@@ -39,7 +37,6 @@ h2 {
     border-radius: 20px;
     transition: background-color 300ms;
     border: solid;
-    max-width: 200px;
 }
 
 #btn-piedra:hover,
@@ -51,7 +48,7 @@ h2 {
 }
 
 button {
-    font-size: 30px;
+    font-size: 1rem;
     border-radius: 20%;
     padding: 10px;
 }
